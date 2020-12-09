@@ -1,10 +1,21 @@
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Button } from 'react-native'
+import FABRight from '../components/FABR'
+import FABLeft from '../components/FABL'
+
 
 const HomeScreen = ({navigation, route}) => {
     return (
         <View style={styles.container1}>
             <Text>{} Screen</Text>
+            <Button
+                title="Vai Para Primeira Tela"
+                onPress={() => navigation.navigate('First')}
+            />
+            
+            <FABLeft/>
+            <FABRight/>
+
         </View>
     )
 }
