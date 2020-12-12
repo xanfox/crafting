@@ -1,17 +1,25 @@
 import * as React from 'react';
-import { Alert, StyleSheet, ToastAndroid } from 'react-native';
+import { StyleSheet, ToastAndroid } from 'react-native';
 import { FAB } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
+import { useRoute } from '@react-navigation/native';
 
-const FABLeft = () => (
-  <FAB
-    style={styles.fabR}
-    //small
-    icon="minus"
-    onPress={() => ToastAndroid.show("Botão esquerdo (menos) clicado", ToastAndroid.SHORT)}
-  />
+ function FABLeft  () {
+  const navigation = useNavigation();
+  const route = useRoute();
 
-  
-);
+    return(
+        <FAB
+        style={styles.fabR}
+        //small
+        icon="minus"
+        
+
+        onPress={() => navigation.navigate('Second')}
+        onTouchStart={() => ToastAndroid.show(route.name, ToastAndroid.SHORT)}
+      />
+    )
+};
 
 const styles = StyleSheet.create({
   fabR: {

@@ -1,10 +1,14 @@
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Button } from 'react-native'
 
 const FirstScreen = ({navigation, route}) => {
     return (
         <View style={styles.container2}>
-            <Text>{} Screen</Text>
+            <Text>{} Primeira Tela: Branco</Text>
+            <Button
+                title="Vai Para Segunda Tela"
+                onPress={() => navigation.navigate('Second')}
+            />
         </View>
     )
 }
