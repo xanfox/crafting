@@ -7,6 +7,12 @@ import { useRoute } from '@react-navigation/native';
  function FABLeft  () {
   const navigation = useNavigation();
   const route = useRoute();
+  const screens = ['Home', 'First', 'Second', 'Third'];
+  const currentScreenNumber = screens.indexOf(route.name);
+  let   goTo = currentScreenNumber - 1;
+    if (route.name == 'Home') {
+      goTo = 0;
+    }
 
     return(
         <FAB
@@ -15,8 +21,8 @@ import { useRoute } from '@react-navigation/native';
         icon="minus"
         
 
-        onPress={() => navigation.navigate('Second')}
-        onTouchStart={() => ToastAndroid.show(route.name, ToastAndroid.SHORT)}
+        onPress={() => navigation.navigate(screens[goTo])}
+        onTouchStart={() => ToastAndroid.show(screens[goTo], ToastAndroid.SHORT)}
       />
     )
 };

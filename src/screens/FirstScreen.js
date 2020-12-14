@@ -1,14 +1,15 @@
 import React from 'react'
 import { StyleSheet, View, Text, Button } from 'react-native'
+import FABRight from '../components/FABR'
+import FABLeft from '../components/FABL'
 
 const FirstScreen = ({navigation, route}) => {
     return (
         <View style={styles.container2}>
-            <Text>{} Primeira Tela: Branco</Text>
-            <Button
-                title="Vai Para Segunda Tela"
-                onPress={() => navigation.navigate('Second')}
-            />
+            <Text>Primeira Tela: Branco</Text>
+
+            <FABLeft/>
+            <FABRight/>
         </View>
     )
 }

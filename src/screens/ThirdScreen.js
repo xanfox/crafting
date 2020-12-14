@@ -1,10 +1,14 @@
 import React from 'react'
 import { StyleSheet, View, Text } from 'react-native'
+import FABRight from '../components/FABR'
+import FABLeft from '../components/FABL'
 
 const ThirdScreen = ({navigation, route}) => {
     return (
         <View style={styles.container3}>
-            <Text>{} Screen</Text>
+            <Text>Terceira Tela</Text>
+            <FABLeft/>
+            <FABRight/>
         </View>
     )
 }
