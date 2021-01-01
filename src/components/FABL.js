@@ -3,6 +3,7 @@ import { StyleSheet, ToastAndroid } from 'react-native';
 import { FAB } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 import { useRoute } from '@react-navigation/native';
+import  fabStyles  from '../styles/fabStyles';
 
  function FABLeft  () {
   const navigation = useNavigation();
@@ -16,9 +17,9 @@ import { useRoute } from '@react-navigation/native';
 
     return(
         <FAB
-        style={styles.fabR}
-        //small
-        icon="minus"
+        style={fabStyles.fabL}
+        big
+        icon="chevron-left-circle-outline"
         
 
         onPress={() => navigation.navigate(screens[goTo])}
@@ -27,13 +28,6 @@ import { useRoute } from '@react-navigation/native';
     )
 };
 
-const styles = StyleSheet.create({
-  fabR: {
-    position: 'absolute',
-    margin: 16,
-    left: 0,
-    bottom: 0,
-  },
-})
+
 
 export default FABLeft;

@@ -3,6 +3,7 @@ import { StyleSheet, ToastAndroid } from 'react-native';
 import { FAB } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 import { useRoute } from '@react-navigation/native';
+import  fabStyles  from '../styles/fabStyles';
 
  function FABRight  () {
   const navigation = useNavigation();
@@ -18,9 +19,9 @@ import { useRoute } from '@react-navigation/native';
 
     return(
         <FAB
-        style={styles.fabR}
+        style={fabStyles.fabR}
         //small
-        icon="plus"
+        icon="chevron-right-circle-outline"
         
 
         onPress={() => navigation.navigate(screens[goTo])}
@@ -29,13 +30,5 @@ import { useRoute } from '@react-navigation/native';
     )
 };
 
-const styles = StyleSheet.create({
-  fabR: {
-    position: 'absolute',
-    margin: 16,
-    right: 0,
-    bottom: 0,
-  },
-})
 
 export default FABRight;
