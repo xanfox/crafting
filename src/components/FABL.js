@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, ToastAndroid } from 'react-native';
+import {  ToastAndroid } from 'react-native';
 import { FAB } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 import { useRoute } from '@react-navigation/native';
@@ -8,10 +8,10 @@ import  fabStyles  from '../styles/fabStyles';
  function FABLeft  () {
   const navigation = useNavigation();
   const route = useRoute();
-  const screens = ['Home', 'First', 'Second', 'Third'];
+  const screens = ['Random', 'Home', 'First', 'Second', 'Third'];
   const currentScreenNumber = screens.indexOf(route.name);
   let   goTo = currentScreenNumber - 1;
-    if (route.name == 'Home') {
+    if (route.name == 'Random') {
       goTo = 0;
     }
 

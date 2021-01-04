@@ -1,16 +1,19 @@
 import React from 'react'
-import { StyleSheet, View, Text, Button } from 'react-native'
+import { StyleSheet, SafeAreaView, View, Text } from 'react-native'
 import FABRight from '../components/FABR'
 import FABLeft from '../components/FABL'
 
 const FirstScreen = ({navigation, route}) => {
     return (
-        <View style={styles.container2}>
-            <Text>Primeira Tela: Branco</Text>
-
+        <SafeAreaView style={styles.container}>
+           <View style={styles.box}/>
+           <View style={styles.box}/>
+           <View style={styles.box}/>
+           <View style={styles.box}/>
+           <View style={styles.box}/>
             <FABLeft/>
             <FABRight/>
-        </View>
+        </SafeAreaView>
     )
 }
 
@@ -18,10 +21,25 @@ export default FirstScreen
 
 const styles = StyleSheet.create({
 
-    container2: {
+    container: {
       flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
+      flexDirection: 'row',
+      backgroundColor: '#ccc',
+      flexWrap:'wrap',
+      alignContent:'space-between'
     },
+    box:{
+        flex:1,
+        minWidth:100,
+        //height:100,
+        //minHeight:200,
+        minHeight:'40%',
+        backgroundColor:'#666',
+        borderColor:'#999',
+        borderWidth:5,
+        margin:10,
+        
+
+
+    }
   });

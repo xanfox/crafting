@@ -8,7 +8,7 @@ import  fabStyles  from '../styles/fabStyles';
  function FABRight  () {
   const navigation = useNavigation();
   const route = useRoute();
-  const screens = ['Home', 'First', 'Second', 'Third'];
+  const screens = ['Random', 'Home', 'First', 'Second', 'Third'];
   const currentScreenNumber = screens.indexOf(route.name);
   let   goTo = currentScreenNumber + 1;
     //atualizar sempre essa cláusula com 
