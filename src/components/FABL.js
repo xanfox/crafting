@@ -8,7 +8,7 @@ import  fabStyles  from '../styles/fabStyles';
  function FABLeft  () {
   const navigation = useNavigation();
   const route = useRoute();
-  const screens = ['Random', 'Home', 'First', 'Second', 'Third'];
+  const screens = ['Random', 'Resume', 'Home', 'First', 'Second', 'Third'];
   const currentScreenNumber = screens.indexOf(route.name);
   let   goTo = currentScreenNumber - 1;
     if (route.name == 'Random') {

@@ -2,11 +2,12 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import HomeScreen from    '../screens/HomeScreen';
-import FirstScreen from   '../screens/FirstScreen';
-import SecondScreen from  '../screens/SecondScreen';
-import ThirdScreen from   '../screens/ThirdScreen';
-import RandomNumbers from '../screens/RandomNumbers';
+import HomeScreen     from '../screens/HomeScreen';
+import FirstScreen    from '../screens/FirstScreen';
+import SecondScreen   from '../screens/SecondScreen';
+import ThirdScreen    from '../screens/ThirdScreen';
+import RandomNumbers  from '../screens/RandomNumbers';
+import ProfileResume  from '../screens/ProfileResume';
 
 const Stack = createStackNavigator();
 
@@ -35,6 +36,10 @@ const RootNavigation = () => {
                     component={ThirdScreen}
                     options={{title:'tela de logout e outros afins'}}
        />
+       <Stack.Screen name="Resume"
+                     component={ProfileResume}
+                     options={{title:'Profile Screen Resume'}}               
+      />
     </Stack.Navigator>
   </NavigationContainer>
   );
